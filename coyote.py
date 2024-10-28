@@ -65,6 +65,9 @@ def delete_errored_vm():
                     print("Deleting Instance: " + node["ID"])
                     command_line("openstack server delete " + node["ID"])
                     del vwnJSON[node["Name"]]
+            except KeyError:
+                print("node not known")
+                command_line("openstack server delete " + node["ID"])
             except IndexError:
                 print("node problem")
 
@@ -238,6 +241,9 @@ for aggregateGroup in aggregateGroupsListPre:
                                 print("Creating new virtual workernode - " + nameString)
                                 command_line(
                                     instanceCreateString + propertyString + flavorString + " " + nameString)
+                                
+                                with open(jsonTrackingFile, 'w') as jsonfile:
+                                    json.dump(vwnJSON, jsonfile)
 
                             # details to be shown in the json file vwntracking
                             if nameString not in vwnJSON:

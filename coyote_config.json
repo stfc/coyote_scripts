@@ -1,6 +1,6 @@
 {
   "vwnStaticNamePrefix": "vwn-static",
-  "vwnImageName": "vwn-2019-08-06-03",
+  "vwnImageName": "rocky-8-aqml",
   "networkName": "Internal",
   "availabilityZone": "ceph",
   "configDrive": true,
@@ -10,45 +10,24 @@
   "coyoteRemoteUser": "coyote",
   "jsonTrackingFile": "/home/coyote/vwntracking.json",
   "metadata": {
-    "AQ_OSNAME": "sl",
-    "AQ_OSVERSION": "7x-x86_64",
     "AQ_ARCHETYPE": "ral-tier1",
     "AQ_PERSONALITY": "workernode-virtual",
-    "AQ_SANDBOX": "wjc16017/workernode-virtual"
+    "AQ_DOMAIN": "prod"
   },
   "aggregates": {
-    "2015-CPU": {
-      "16": "m2.xlarge",
-      "8": "m1.xlarge"
+    "2019-cpu": {
+      "124": "l2.large"
     },
-    "2016-gpu": {
-      "1": "g-k620.small"
+    "2020-cpu": {
+      "124": "l3.large"
     },
-    "2017-ukt0": {
-      "60": "c1.6xl",
-      "28": "c1.4xl",
-      "16": "c3.xlarge",
-      "8": "c2.large"
+    "2021-cpu": {
+      "252": "l5.c252",
+      "124": "l5.c124"
     },
-    "2018-alc-gpu-p100": {
-      "60": "g-p100.xlarge",
-      "30": "g-p100.medium"
-    },
-    "2018-alc-gpu-p4000": {
-      "14": "g-p4000.small"
-    },
-    "2014-cpu": {
-      "16": "m2.xlarge",
-      "8": "m1.xlarge"
-    },
-    "2018-iris-cpu": {
-      "60": "c1.6xl",
-      "28": "c1.4xl",
-      "16": "c3.xlarge",
-      "8": "c2.large"
-    },
-    "2018-iris-cpu-localdisk": {
-      "60": "l1.6xl"
+    "2022-cpu": {
+      "252": "l6.c252",
+      "124": "l6.c124"
     }
   },
   "sourcecmd": "source /home/coyote/condor-openrc.sh;"
